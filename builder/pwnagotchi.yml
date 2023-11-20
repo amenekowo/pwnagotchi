@@ -41,7 +41,7 @@
         # url: "https://github.com/bettercap/bettercap/releases/download/v2.31.0/bettercap_linux_armhf_v2.31.0.zip"
         ui: "https://github.com/bettercap/ui/releases/download/v1.3.0/ui.zip"
       pwngrid:
-        url: "https://github.com/evilsocket/pwngrid/releases/download/v1.10.3/pwngrid_linux_armhf_v1.10.3.zip"
+        url: "https://github.com/evilsocket/pwngrid/releases/download/v1.10.3/pwngrid_linux_aarch64_v1.10.3.zip"
       apt:
         hold:
           - firmware-atheros
@@ -120,7 +120,7 @@
           - p7zip-full
 
   environment:
-    ARCHFLAGS: "-arch armv7l"
+    ARCHFLAGS: "-arch aarch64"
 
   tasks:
   - name: System details
@@ -311,7 +311,7 @@
   # Install go-1.20.6
   - name: Install go-1.20.6
     unarchive:
-      src: https://go.dev/dl/go1.20.6.linux-armv6l.tar.gz
+      src: https://go.dev/dl/go1.20.11.linux-arm64.tar.gz
       dest: /usr/local
       remote_src: yes
     register: golang
